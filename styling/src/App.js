@@ -2,10 +2,11 @@ import './App.css';
 import StyledComponentsExample from "./components/StyleComponentsExample/StyledComponentsExample";
 import React from "react";
 
+
 function App() {
     return (
         <div className="App">
-            <StyledComponentsExample />
+            <StyledComponentsExample/>
         </div>
     );
 }
