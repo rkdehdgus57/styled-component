@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-export default function StyledComponetsExample() {
+export default function StyledComponentsExample() {
     const Title = styled.h1`
         font-size: 1.5em;
         text-align: center;
