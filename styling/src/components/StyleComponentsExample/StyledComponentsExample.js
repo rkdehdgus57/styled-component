@@ -25,6 +25,11 @@ export default function StyledComponentsExample() {
       border-radius: 3px;
     `;
 
+    const TomatoButton = styled(Button)`
+      color: tomato;
+      border-color: tomato;
+    `;
+
     return (
         <>
             <Wrapper>
@@ -32,6 +37,14 @@ export default function StyledComponentsExample() {
             </Wrapper>
             <Button onClick={() => alert('normal')}>Normal</Button>
             <Button primary onClick={() => alert('primary')}>Primary</Button>
+            <TomatoButton>Tomato</TomatoButton>
+            <br/>
+            <Button as={"a"} href={"#"}>
+                Link with Button styles
+            </Button>
+            <TomatoButton as={"a"} href={"#"}>
+                Link with Tomato Button styles
+            </TomatoButton>
         </>
     )
 }
