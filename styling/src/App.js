@@ -1,4 +1,3 @@
-import './App.css';
 import StyledComponentsExample from "./components/StyleComponentsExample/StyledComponentsExample";
 import React from "react";
 
