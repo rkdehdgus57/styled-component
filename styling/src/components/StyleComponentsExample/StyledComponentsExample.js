@@ -30,6 +30,8 @@ export default function StyledComponentsExample() {
       border-color: tomato;
     `;
 
+    const reversedButton = props => <Button {...props} children={props.children.split('').reverse()}/>
+
     return (
         <>
             <Wrapper>
@@ -45,6 +47,10 @@ export default function StyledComponentsExample() {
             <TomatoButton as={"a"} href={"#"}>
                 Link with Tomato Button styles
             </TomatoButton>
+            <br/>
+            <Button as={reversedButton}>
+                Custom Button with Normal Button styles
+            </Button>
         </>
     )
 }
