@@ -29,12 +29,22 @@ const TomatoButton = styled(Button)`
       border-color: tomato;
     `;
 
+const Input = styled.input.attrs((props) => ({
+    type: "text",
+    size: props.size || "1em",
+}))`
+  border: 2px solid palegoldenrod;
+  margin: ${(props) => props.size};
+  padding: ${(props) => props.size};
+`;
+
 export default function StyledComponentsExample() {
 
     const reversedButton = props => <Button {...props} children={props.children.split('').reverse()}/>
 
     return (
         <>
+            <Input placeholder={"A bigger text input"} size={"2em"} />
             <Wrapper>
                 <Title>Hello World!</Title>
             </Wrapper>
