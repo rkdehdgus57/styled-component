@@ -1,19 +1,18 @@
 import React from "react";
 import styled from "styled-components";
 
-export default function StyledComponentsExample() {
-    const Title = styled.h1`
+const Title = styled.h1`
         font-size: 1.5em;
         text-align: center;
         color: palevioletred;
     `
 
-    const Wrapper = styled.section`
+const Wrapper = styled.section`
         padding: 4em;
         background: papayawhip;
     `
 
-    const Button = styled.button`
+const Button = styled.button`
       /* Adapt the colors based on primary prop */
       background: ${props => props.primary ? "palevioletred" : "white"};
       color: ${props => props.primary ? "white" : "palevioletred"};
@@ -25,10 +24,12 @@ export default function StyledComponentsExample() {
       border-radius: 3px;
     `;
 
-    const TomatoButton = styled(Button)`
+const TomatoButton = styled(Button)`
       color: tomato;
       border-color: tomato;
     `;
+
+export default function StyledComponentsExample() {
 
     const reversedButton = props => <Button {...props} children={props.children.split('').reverse()}/>
 
@@ -54,3 +55,12 @@ export default function StyledComponentsExample() {
         </>
     )
 }
+
+/***
+ Automatic critical CSS : 자동 style injects & 코드 스플릿
+ No class name bugs: unique / overlap x / misspellings
+ Easier deletion of CSS: tied to a specific component
+ Simple dynamic styling: props / global theme
+ Painless maintenance: styling affecting your component
+ Automatic vendor prefixing: current standard only
+ ***/
